@@ -32,16 +32,16 @@ app.use(async (ctx, next) => {
 app.use(async (ctx, next) => {
 	let filepath = await ctx.request.url.pathname
 	let regex = new RegExp("\.htm|\.html")
+	let nolayout = ["www/google87c048ae2fb1f3da.html"]
 	if (await exists(`www${filepath}.html`)) {
 		filepath = `www${filepath}.html`
 	} else if (filepath == "/"){
 		filepath = `www/index.html`
-	}
-	else {
+	} else {
 		filepath = `www${filepath}`
 	}
 	console.log(filepath)
-	if (regex.test(filepath)){
+	if (regex.test(filepath) && !nolayout.includes(filepath)){
 		ctx.response.body = await getTemplate("www/layout.html", {"body": filepath})
 		console.log(ctx.response.body)
 	} else {
