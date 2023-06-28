@@ -1,6 +1,6 @@
 import { Application, send, isHttpError } from "https://deno.land/x/oak@v12.2.0/mod.ts";
 import { exists } from "https://deno.land/std@0.183.0/fs/mod.ts";
-import dot from "https://cdnjs.cloudflare.com/ajax/libs/dot/1.1.3/doT.min.js"
+import dot from "https://esm.sh/dot@1.1.3"
 import pagedata from "./pagedata.json" assert { type: "json" }
 
 const PORT = 8000;
