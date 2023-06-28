@@ -1,0 +1,17 @@
+[{
+	"name": "/index",
+	"title": "Ahsab Ali's website",
+	"desc": "Welcome to the website of Ahsab Ali. Here you can find everything abput me like programming"
+},{
+	"name": "/about",
+	"title": "About",
+	"desc": "This is the about page of my website. Here you can see why this page is made"
+},{
+	"name": "/writings",
+	"title": "My Writings",
+	"desc": "Here you can find all the writings on my site. It is for topics from things I make to things I want to make"
+},{
+	"name": "/projects",
+	"title": "My Projects",
+	"desc": "This is all my projects I have been working on."
+}]
