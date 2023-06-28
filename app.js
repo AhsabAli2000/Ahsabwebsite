@@ -25,12 +25,12 @@ app.use(async (ctx, next) => {
 app.use(async (ctx) => {
 
 	const regex = new RegExp("\.htm|\.html")
-	let filename = await ctx.request.url.pathname
+	let filename = ctx.request.url.pathname
 
 	let nolayout = ["www/google87c048ae2fb1f3da.html"]
 	
 	async function detpath(path) {
-		if (await exists(`www${path}`))	path = `www${path}`
+		if (await exists(`www${path}`) && path != "/") path = `www${path}`
 		else if (await exists(`www${path}.html`)) path = `www${path}.html`
 		else if (path == "/") path = `www/index.html`
 		else path = `www${path}`
@@ -47,7 +47,8 @@ app.use(async (ctx) => {
 				desc = pagedata[i].desc
 			}
 		}
-		ctx.response.body = await templ({body: await Deno.readTextFile(sendpath), title: title, desc: desc})
+
+	ctx.response.body = await templ({body: await Deno.readTextFile(sendpath), title: title, desc: desc})
 	} else {
 		await send(ctx, sendpath, {
 			root: "./",
