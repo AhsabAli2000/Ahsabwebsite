@@ -9,26 +9,28 @@
     <script src="./lib/bootstrap.bundle.min.js"></script>
     <title>{{=it.title}}</title>
 </head>
-<body class="text-center h-100 d-flex flex-column">
+<body class="h-100 d-flex flex-column">
     <header>
-        <nav class="navbar navbar-expand-md d-flex flex-column fixed-top navbar-dark bg-dark-subtle">
-            <ul class="container-fluid navbar-nav d-flex flex-row">
-                <li class="nav-item navbar-brand"><a href="/index" class="nav-link">Ahsab Ali's Website</a></li>
+        <nav class="navbar navbar-expand-md fixed-top navbar-dark bg-dark-subtle">
+            <div class="container-fluid">
+                <a href="/index" class="nav-link navbar-brand">Ahsab Ali's Website</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarCollapse">
-                    <li class="nav-item"><a class="nav-link" href="/projects">Projects</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/writings">Writings</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/about">About</a></li>
-                </div>
-            </ul>
+                <ul class="container-fluid navbar-nav d-flex flex-row">
+                    <div class="collapse navbar-collapse" id="navbarCollapse">
+                        <li class="nav-item"><a class="nav-link" href="/projects">Projects</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/writings">Writings</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/about">About</a></li>
+                    </div>
+                </ul>
+            </div>
         </nav>
     </header>
-    <main class="flex-grow-1 container-fluid 100vh" style="padding-top: 4.5rem;">
+    <main class="text-center flex-grow-1 container-fluid 100vh" style="padding-top: 6em">  
         {{=it.body}}
     </main>
-    <footer class="mt-auto">
+    <footer class="px-3 container bg-dark-subtle footer">
         <div id="other-sites">
             <!-- <ul>
                 <li><a href=""></a></li>
@@ -39,16 +41,9 @@
             </ul> -->
         </div>
         <address>
-            <p>My email <a href="mailto:abc@xyz.com">abc@xyz.com</a></p>
+            <p>My email <a href="mailto:3125ahsab@gmail.com">3125ahsab@gmail.com</a></p>
+            <p>My github <a href="https://github.com/AhsabAli2000">AhsabAli2000</a></p>
         </address>
-        <div id="newsletter">
-            <form> 
-                <label for="email">To recieve your info about this website 
-                    <input id="email" type="email" placeholder="Enter your email address" required>
-                </label>
-                <input type="submit">
-            </form>
-        </div>
     </footer>
 </body>
 </html>
